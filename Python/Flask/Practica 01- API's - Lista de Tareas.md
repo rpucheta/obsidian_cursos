@@ -136,7 +136,23 @@ A partir de la implementación de todas estas operaciones en la API de gestión 
 En general, esta implementación muestra cómo crear una API básica para una aplicación de gestión de tareas, pero puede ser ampliada y mejorada para adaptarse a requisitos más avanzados o específicos del proyecto. También destaca la importancia de utilizar una estructura y diseño organizados al crear una API web para facilitar el mantenimiento y la escalabilidad.
 
 ---
-## Referencias (si es aplicable)
-[Lista de referencias si la hay]
+## Referencias
+Al desarrollar una aplicación web utilizando Flask y programación en Python, es importante mencionar y seguir las mejores prácticas y referencias relacionadas con el desarrollo web y Flask en particular. A continuación, te proporciono algunas referencias útiles que pueden ayudarte a profundizar en el desarrollo de aplicaciones web con Flask:
+
+1. **Documentación oficial de Flask:** La documentación oficial de Flask es una fuente invaluable de información. Contiene ejemplos detallados, guías de inicio rápido y una explicación completa de los conceptos clave de Flask. Puedes encontrarla en el sitio web oficial de Flask: [Flask Documentation](https://flask.palletsprojects.com/)
+    
+2. **RESTful API Design:** Para diseñar una API RESTful de manera efectiva, es útil comprender los principios de diseño REST. El libro "API Design" de Jake VanderPlas ofrece una introducción sólida a estos conceptos.
+    
+3. **Guía de buenas prácticas de Flask:** El artículo "The Flask Mega-Tutorial Part I: Hello, World!" escrito por Miguel Grinberg es una guía popular que abarca una amplia variedad de temas relacionados con Flask y proporciona ejemplos prácticos para desarrolladores. Puedes encontrarlo en su blog: [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+    
+4. **Librerías y extensiones de Flask:** Flask cuenta con una amplia comunidad de desarrolladores que han creado extensiones útiles para tareas comunes. Puedes explorar estas extensiones en el repositorio de extensiones de Flask: [Flask Extensions](https://flask.palletsprojects.com/en/2.1.x/extensions/)
+    
+5. **Librerías para manejo de JSON:** Para trabajar con datos JSON en Python, puedes utilizar la librería `json`. Asegúrate de revisar la documentación oficial de Python sobre el manejo de JSON: [json - JSON encoder and decoder](https://docs.python.org/3/library/json.html)
+    
+6. **Referencias generales de Python:** Siempre es útil tener una sólida comprensión de Python. La documentación oficial de Python y libros como "Python Crash Course" de Eric Matthes pueden ser recursos valiosos.
+    
+7. **Libros sobre Flask:** Hay varios libros dedicados a Flask que cubren en profundidad el desarrollo web con este framework. Algunos ejemplos son "Flask Web Development" de Miguel Grinberg y "Flask By Example" de Gareth Dwyer.
+    
+8. **Comunidad de desarrolladores:** Participar en comunidades en línea como el foro de Flask en Stack Overflow o el subreddit de Flask en Reddit puede ayudarte a obtener respuestas a preguntas específicas y aprender de otros desarrolladores.
 
 ---
