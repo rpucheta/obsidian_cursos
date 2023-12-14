@@ -98,6 +98,7 @@
 			 ---
 - **Introducción a Flask**
     - ¿Qué es Flask y por qué usarlo para APIs?
+	    - 
     - Estructura básica de una aplicación Flask.
     - Rutas y métodos en Flask.
 
