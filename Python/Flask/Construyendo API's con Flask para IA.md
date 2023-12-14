@@ -2,9 +2,9 @@
 
 - **Introducción a las APIs 
     
-    - Qué es una API y su importancia en proyectos de IA.
+    - #### Qué es una API y su importancia en proyectos de IA.
 	    - Una API, o Interfaz de Programación de Aplicaciones (del inglés, Application Programming Interface), es un conjunto de reglas y definiciones que permite que diferentes aplicaciones de software se comuniquen entre sí. Funciona como un intermediario que permite a dos aplicaciones distintas intercambiar datos y funcionalidades de manera eficiente y segura.
-			### Importancia de las APIs en Proyectos de Inteligencia Artificial (IA)
+			##### Importancia de las APIs en Proyectos de Inteligencia Artificial (IA)
 			1. **Facilitar la Integración de Modelos de IA**: Las APIs permiten integrar modelos de IA, como algoritmos de aprendizaje automático o redes neuronales, en aplicaciones y sistemas existentes sin necesidad de alterar profundamente su estructura. Por ejemplo, un modelo de IA para reconocimiento de imágenes puede ser accesible a través de una API, permitiendo que distintas aplicaciones lo utilicen fácilmente.
 			2. **Acceso y Manejo de Datos**: Las APIs son cruciales para acceder y manejar grandes volúmenes de datos, que son esenciales para entrenar y operar modelos de IA. Pueden conectarse con bases de datos, servicios de almacenamiento en la nube, o incluso con otras APIs para recopilar, procesar y analizar datos. 
 			3. **Escalabilidad y Flexibilidad**: Las APIs permiten escalar las soluciones de IA de manera eficiente. A medida que las necesidades de una aplicación crecen, se pueden añadir más recursos o capacidades de IA a través de la API sin cambiar la arquitectura subyacente de las aplicaciones que la utilizan..
@@ -13,8 +13,8 @@
 			6. **Personalización y Mejora Continua**: A través de APIs, los modelos de IA pueden recibir retroalimentación continua y datos de usuario, lo que permite refinar y personalizar sus capacidades..
 			7. **Democratización del Acceso a la IA**: Las APIs hacen que la tecnología de IA sea más accesible para desarrolladores y empresas que no tienen necesariamente la experiencia o recursos para desarrollar sus propios modelos de IA desde cero..
 			- En Resumen, las APIs juegan un papel crucial en la implementación y el éxito de proyectos de IA, facilitando la integración, el manejo de datos, la escalabilidad, y la interoperabilidad, acelerando el desarrollo y la adopción de soluciones innovadoras basadas en inteligencia artificial.
-		
-    - Tipos de APIs (REST, GraphQL, etc.).
+		---
+    - #### Tipos de APIs (REST, GraphQL, etc.).
 	    Las APIs, o Interfaces de Programación de Aplicaciones, vienen en varios tipos y estilos, cada uno adecuado para diferentes necesidades y casos de uso. Los dos tipos más comunes y ampliamente utilizados son las APIs REST y GraphQL, pero hay otros estilos y protocolos importantes también. Aquí te explico brevemente cada uno:.
 		##### 1. **API REST (Representational State Transfer)**
 		- **Basadas en HTTP**: Utilizan los métodos estándar de HTTP (GET, POST, PUT, DELETE, etc.).
@@ -41,7 +41,9 @@
 		
 		Cada tipo de API tiene sus propias ventajas y desventajas, y la elección de una sobre otra depende de los requisitos específicos del proyecto, como la necesidad de rendimiento, la complejidad de los datos, la seguridad y la escalabilidad.
 		
-    - Métodos comunes de API (GET, POST, PUT, DELETE).
+		---
+		
+	- #### Métodos comunes de API (GET, POST, PUT, DELETE).
 	    - En el desarrollo de APIs, especialmente las que siguen el estilo arquitectónico REST (Representational State Transfer), hay varios métodos HTTP comunes que se utilizan para definir las acciones que se pueden realizar. Estos métodos, también conocidos como "verbos", incluyen principalmente GET, POST, PUT y DELETE. Cada uno tiene un propósito específico:.
 		##### 1. **GET**
 		- **Uso**: Solicitar datos de un recurso específico.
@@ -67,6 +69,15 @@
 		    - Es idempotente. Hacer múltiples solicitudes DELETE idénticas tiene el mismo efecto que hacer una sola.
 		- **Ejemplo de Uso**: Borrar un artículo específico de un blog o eliminar una cuenta de usuario.
 		Estos métodos son fundamentales para la creación de APIs RESTful, ya que permiten una clara separación de las acciones y facilitan la comprensión y el mantenimiento de la API. Al seguir estos estándares, los desarrolladores pueden crear interfaces más intuitivas y fáciles de usar tanto para los creadores de la API como para sus consumidores..
+		--- 
+	- #### Status Code.
+		-  ##### ¿Que son los Http Status Code?
+			- Los HTTP status codes (códigos de estado HTTP) son códigos numéricos que se utilizan en el protocolo HTTP (Hypertext Transfer Protocol) para indicar el resultado de una solicitud realizada por un cliente (como un navegador, app, etc...) a un servidor web. Estos códigos proporcionan información sobre el estado de la solicitud y permiten que el cliente y el servidor se comuniquen de manera efectiva sobre el resultado de la operación solicitada. Los códigos de estado se dividen en cinco clases principales, cada una con un rango numérico específico:
+				 1. Información (Informational): Estos códigos se utilizan para proporcionar información provisional sobre el estado de la solicitud. Los códigos comunes en esta clase son 100 (Continuar) y 101 (Cambiar protocolos).
+				 2.  Éxito (Success): Los códigos de esta clase indican que la solicitud se ha completado con éxito. Algunos ejemplos incluyen el código 200 (OK), que significa que la solicitud se procesó correctamente, y el código 201 (Creado), que se utiliza cuando se crea un nuevo recurso en el servidor.
+				 3. Redirección (Redirection): Estos códigos se utilizan para indicar que la solicitud debe tomar una acción adicional para completarse. Por ejemplo, el código 302 (Encontrado) se usa para redireccionar el navegador a otra URL.
+				 4. Error del cliente (Client Error): Los códigos de estado en esta clase indican que la solicitud contiene un error por parte del cliente. El código 400 (Solicitud incorrecta) es común cuando la solicitud es incorrecta o está mal formada.
+				 5. Error del servidor (Server Error): Estos códigos se utilizan cuando el servidor encuentra un error al procesar la solicitud del cliente. El código 500 (Error interno del servidor) es un ejemplo común de esta clase y se usa cuando ocurre un error en el servidor que impide que se procese la solicitud.
 - **Introducción a Flask**
     - ¿Qué es Flask y por qué usarlo para APIs?
     - Estructura básica de una aplicación Flask.
@@ -112,10 +123,3 @@
 - **Repaso de lo Aprendido y Próximos Pasos 
 - **Sesión de Preguntas y Respuestas
 
-### Notas Adicionales
-
-- **Interactividad**: Fomentar la participación activa durante la clase. Por ejemplo, realizar preguntas rápidas después de cada sección.
-- **Ejercicios Prácticos**: Asegúrate de que los ejercicios sean alcanzables pero desafiantes. Incentiva a los estudiantes a pensar en cómo podrían expandir o modificar los ejemplos dados.
-- **Recursos Adicionales**: Proporcionar recursos adicionales para el aprendizaje autónomo, como tutoriales en línea, documentación y foros de discusión.
-
-Este temario está diseñado para ser flexible y puede ajustarse según el nivel de los estudiantes y los objetivos específicos del curso. La combinación de teoría, práctica y ejercicios interactivos debería proporcionar una experiencia de aprendizaje integral y atractiva.
