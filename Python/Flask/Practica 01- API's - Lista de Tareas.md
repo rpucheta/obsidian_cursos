@@ -26,6 +26,16 @@
 - Es necesario que se usen todos y cada uno de los conceptos que hemos abordado durante el curso, morfología de un request de un response, status code, métodos, etc...
 ---
 ## Solución/Implementación
+### Setup Flask
+```
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Lista de tareas (inicialmente vacía)
+tasks = []
+
+```
 
 ### Listar todas las tareas
 [Incluye código de ejemplo]
