@@ -1,3 +1,4 @@
+![[Pasted image 20231214020431.png]]
 ## Información General
 
 - **Nombre del Estudiante:** [Tu nombre]
