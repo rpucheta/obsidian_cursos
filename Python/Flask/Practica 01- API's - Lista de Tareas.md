@@ -1,15 +1,15 @@
-### Información General
+## Información General
 
 - **Nombre del Estudiante:** [Tu nombre]
 - **Fecha de Entrega:** [Fecha de entrega]
 -  **Curso:** [Nombre de la asignatura o curso]
 - **Profesor/Instructor:** [Nombre del profesor o instructor]
 
-### Descripción
+## Descripción
 
 - Vamos a emular un TODO de tareas, donde por medio de una API Flask , utilizando los diferentes métodos , vamos a poder:
 >
-	- Listas todas las tareas.
+	- Listar todas las tareas.
 	- Añadir una tarea
 	- Borrar una tarea
 	- Completar una tarea
@@ -18,55 +18,43 @@
 - Todo los contenidos que se muestre, tendrán que mostrarse por medio de un cliente rest y en formato  JSON.
 - Si lo veis muy fácil,  habrá tres tareas extra:
 >
-	- Ser Capaces de editar un tarea en concreto.
+	- Editar una tarea en concreto.
 	- Borrar todas las tareas finalizadas.
 	- Cambiar una tarea de Completa a incompleta.
 ### Requisitos Previos
 
 - Es necesario que se usen todos y cada uno de los conceptos que hemos abordado durante el curso, morfología de un request de un response, status code, métodos, etc...
+---
+## Solución/Implementación
 
- ## Diseño de la Solución
+### Listar todas las tareas
+[Incluye código de ejemplo]
 
-### Diagrama de Flujo
+### Añadir una tarea
+[Incluye código de ejemplo]
 
-[Incluye un diagrama de flujo que represente la lógica o el proceso general de tu solución.]
+### Borrar una tarea
+[Incluye código de ejemplo]
 
-### Pseudocódigo (Opcional)
+### Completar una tarea
+[Incluye código de ejemplo]
 
-[Si es relevante, puedes proporcionar un pseudocódigo que describa la estructura y el flujo de tu programa antes de escribir el código real.]
+### Editar una tarea en concreto.
+[Incluye código de ejemplo]
 
-## Implementación
+### Borrar todas las tareas finalizadas.
+[Incluye código de ejemplo]
 
-### Código Fuente
+### Cambiar una tarea de Completa a incompleta.
+[Incluye código de ejemplo] 
 
-[Aquí puedes incluir el código fuente completo de tu programa. Puedes organizarlo por módulos o secciones si es necesario.]
-
-pythonCopy code
-
-`# Ejemplo de código fuente en Python  def main():     # Tu código aquí  if __name__ == "__main__":     main()`
-
-### Explicación del Código
-
-[Brinda comentarios y explicaciones en el código para que otros puedan entender cómo funciona. Explica cualquier parte compleja o importante.]
-
-## Pruebas y Resultados
-
-### Casos de Prueba
-
-[Enumera los casos de prueba que utilizaste para probar tu programa. Incluye entradas y salidas esperadas.]
-
-### Resultados
-
-[Registra los resultados de tus pruebas y compara las salidas reales con las salidas esperadas. Discute cualquier problema que hayas encontrado y cómo los solucionaste.]
+---
 
 ## Conclusiones
-
 [Resumen de lo que has aprendido de esta práctica y cualquier dificultad o desafío que hayas enfrentado.]
 
-## Mejoras y Trabajo Futuro
-
-[Si es relevante, menciona posibles mejoras o características adicionales que podrían agregarse a tu programa en el futuro.]
-
+---
 ## Referencias (si es aplicable)
+[Lista de referencias si la hay]
 
-[Si has utilizado recursos externos, bibliografía o código de terceros, menciona las fuentes aquí.]
+---
