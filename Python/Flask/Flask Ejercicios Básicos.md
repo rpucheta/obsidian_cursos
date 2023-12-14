@@ -1,3 +1,5 @@
+*v.1.0 - Diciembre 2023*
+
 Ref: https://flask.palletsprojects.com/en/3.0.x/
 
 Mínima Aplicación

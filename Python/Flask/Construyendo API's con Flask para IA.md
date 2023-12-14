@@ -1,3 +1,4 @@
+*v.1.0 - Diciembre 2023*
 #### Parte 1: Introducción a las APIs y Flask
 
 - **Introducción a las APIs 
