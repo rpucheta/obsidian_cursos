@@ -3,7 +3,7 @@
 ![[Pasted image 20231214021542.png]]
 #### Parte 1: Introducción a las APIs y Flask
 
-- **Introducción a las APIs
+- **Introducción a las APIss
     
     - #### Qué es una API y su importancia en proyectos de IA.
 	    - Una API, o Interfaz de Programación de Aplicaciones (del inglés, Application Programming Interface), es un conjunto de reglas y definiciones que permite que diferentes aplicaciones de software se comuniquen entre sí. Funciona como un intermediario que permite a dos aplicaciones distintas intercambiar datos y funcionalidades de manera eficiente y segura.
