@@ -4,7 +4,7 @@
 Ref: https://flask.palletsprojects.com/en/3.0.x/
 
 Mínima Aplicación
-```  
+```python  
 from flask import Flask
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def hello_world():
 ### Ejercicio 1: "Hola Mundo" con Flask
 **Objetivo**: Crear una API simple que responda con "Hola Mundo" cuando se acceda a la raíz.
 
-```
+```python
 from flask import Flask
 
 app = Flask(__name__)
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
 ### Ejercicio 2: "Endpoint de Saludo Personalizado"
 **Objetivo**: Expandir la API para aceptar un nombre a través de la ruta y devolver un saludo personalizado.
-```
+```python
 from flask import Flask
 
 app = Flask(__name__)
@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
 ### Ejercicio 3: "Lista de Tareas Simple"
 **Objetivo:** Crear una API que permita al usuario obtener una lista de tareas.
-```
+```python
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
 ### Ejercicio 4: "Agregar Tarea"
 **Objetivo:** Permitir al usuario agregar una nueva tarea a la lista a través de un endpoint POST.
-```
+```python
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)

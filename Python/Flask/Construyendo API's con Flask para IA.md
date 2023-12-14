@@ -98,10 +98,84 @@
 			 ---
 - **Introducción a Flask**
     - ¿Qué es Flask y por qué usarlo para APIs?
-	    - 
-    - Estructura básica de una aplicación Flask.
-    - Rutas y métodos en Flask.
+	    - Flask es un microframework para Python, utilizado para desarrollar aplicaciones web. Es llamado "micro" porque su objetivo principal es mantener el núcleo simple pero extensible. Flask no requiere herramientas o bibliotecas particulares. No tiene una capa de abstracción de base de datos, formularios de validación, o componentes predefinidos, pero proporciona soporte para extensiones que pueden agregar estas funcionalidades. Esto permite utilizar lo que realmente se necesita y evitar sobrecargar la aplicación con componentes innecesarios.
+	    
+		Aquí algunas razones para usar Flask en el desarrollo de APIs:
 
+		1. **Simplicidad y Flexibilidad:** Flask es fácil de entender y empezar a usar. Su simplicidad permite un rápido desarrollo de aplicaciones web y APIs.
+		2. **Ligero:** Al ser un microframework, Flask no consume muchos recursos, lo que lo hace ideal para aplicaciones pequeñas y medianas.
+		3. **Extensible:** Aunque es simple, Flask puede ser extendido con una variedad de extensiones para agregar características como la validación de formularios, manejo de subidas de archivos, autenticación de usuarios, etc.
+		4. **Control Total:** Flask deja mucho a la elección del desarrollador, lo que significa que se tiene control total sobre qué componentes usar y cómo estructurar la aplicación.
+		5. **Buena Documentación y Comunidad:** Flask tiene una documentación clara y una comunidad activa, lo que facilita el aprendizaje y la resolución de problemas.
+		6. **Compatibilidad con RESTful Request Dispatching:** Flask maneja muy bien las solicitudes RESTful, lo que lo hace una opción popular para el desarrollo de APIs.
+		7. **Integración de Pruebas Unitarias:** Flask permite la integración fácil de pruebas unitarias, lo que es una parte importante del desarrollo de aplicaciones web y APIs.
+		8. **Desarrollo de APIs Eficiente:** Flask es muy utilizado para el desarrollo de backends y APIs, gracias a su capacidad para manejar peticiones HTTP y su compatibilidad con herramientas de serialización como JSON.
+		En resumen, Flask es una excelente opción para desarrollar APIs por su simplicidad, flexibilidad, y eficiencia, especialmente en proyectos que requieren una configuración personalizada o en aquellos que son relativamente pequeños o medianos en escala.
+		---
+    - #### Rutas y métodos en Flask.
+	    - Las rutas y métodos en Flask son fundamentales para construir una aplicación web o una API. Aquí explicaré cómo funcionan y proporcionaré algunos ejemplos:
+
+		##### Rutas en Flask
+
+		Las rutas en Flask son URL que especifican a dónde deben ir los usuarios o las solicitudes para acceder a diferentes partes de una aplicación web o API. Flask utiliza decoradores para enlazar funciones a una URL.
+
+		##### Ejemplo de una Ruta Simple:
+
+		
+
+```python
+from flask import Flask app = Flask(__name__)  
+
+@app.route('/') def home():     
+	return 'Hola Mundo!'
+```
+
+En este ejemplo, `@app.route('/')` es un decorador que le dice a Flask qué URL debe activar la función `home`. Aquí, la función `home` está asociada con la URL raíz (`'/'`), por lo que cuando un usuario visita la URL raíz de la aplicación, verá "Hola Mundo!".
+
+##### Métodos en Flask
+
+Los métodos se refieren a los diferentes tipos de solicitudes HTTP que puede manejar una ruta. Los más comunes son GET, POST, PUT, DELETE, etc.
+
+- **GET:** Se utiliza para solicitar datos del servidor.
+- **POST:** Se utiliza para enviar datos al servidor, por ejemplo, desde un formulario.
+- **PUT:** Se utiliza para actualizar datos en el servidor.
+- **DELETE:** Se utiliza para eliminar datos del servidor.
+
+##### Ejemplo con Métodos Específicos:
+
+pythonCopy code
+
+```python
+@app.route('/usuario', methods=['GET']) def obtener_usuario():     
+	# Código para obtener un usuario     
+	return 'Detalles del usuario'  
+
+@app.route('/usuario', methods=['POST']) def crear_usuario():     
+	# Código para crear un nuevo usuario     
+	return 'Usuario creado'
+```
+
+En este ejemplo, hay dos funciones diferentes asociadas con la misma ruta (`'/usuario'`), pero manejan diferentes métodos HTTP. `obtener_usuario` maneja las solicitudes GET, mientras que `crear_usuario` maneja las solicitudes POST.
+
+##### Parámetros en Rutas
+
+Flask también permite utilizar variables en las rutas, lo que hace que las rutas sean más dinámicas.
+
+##### Ejemplo de Ruta con Parámetros:
+
+
+```python
+@app.route('/usuario/<nombre>') def hola_usuario(nombre):     
+	return f'Hola, {nombre}!'
+```
+
+En este ejemplo, `<nombre>` es una variable en la ruta. Si un usuario visita `/usuario/Ana`, verá "Hola, Ana!".
+
+##### Resumen
+
+En resumen, las rutas y métodos en Flask son esenciales para definir cómo una aplicación web o API responde a las diferentes solicitudes HTTP en diferentes URLs. Permiten una gran flexibilidad y control sobre el comportamiento de la aplicación.
+
+---
 #### Parte 2: Configuración del Entorno y Primeros Pasos
 
 - **Configuración del Entorno de Desarrollo 
