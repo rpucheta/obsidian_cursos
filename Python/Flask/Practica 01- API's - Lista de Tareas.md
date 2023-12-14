@@ -79,13 +79,39 @@ def complete_task(task_id):
 ```
 
 ### Editar una tarea en concreto.
-[Incluye código de ejemplo]
+```python
+@app.route('/tasks/<int:task_id>', methods=['PUT'])
+def edit_task(task_id):
+    if task_id < len(tasks):
+        data = request.get_json()
+        if 'task' in data:
+            tasks[task_id]['task'] = data['task']
+            return jsonify({'message': 'Tarea editada con éxito!'})
+        else:
+            return jsonify({'message': 'Error: Debes proporcionar una tarea válida en el cuerpo JSON.'}), 400
+    else:
+        return jsonify({'message': 'Error: Tarea no encontrada.'}), 404
+```
  
 ### Borrar todas las tareas finalizadas.
-[Incluye código de ejemplo]
+```python
+@app.route('/tasks/clear-completed', methods=['DELETE'])
+def clear_completed_tasks():
+    global tasks
+    tasks = [task for task in tasks if not task['completed']]
+    return jsonify({'message': 'Todas las tareas completadas han sido eliminadas.'})
+```
 
 ### Cambiar una tarea de Completa a incompleta.
-[Incluye código de ejemplo] 
+```python
+@app.route('/tasks/<int:task_id>/incomplete', methods=['PUT'])
+def mark_task_incomplete(task_id):
+    if task_id < len(tasks):
+        tasks[task_id]['completed'] = False
+        return jsonify({'message': 'Tarea marcada como incompleta con éxito!'})
+    else:
+        return jsonify({'message': 'Error: Tarea no encontrada.'}), 404
+```
 
 ---
 
