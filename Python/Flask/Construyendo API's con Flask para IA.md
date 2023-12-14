@@ -244,7 +244,84 @@ En resumen, las rutas y métodos en Flask son esenciales para definir cómo una 
     ---
     
 - ##### Cómo integrar modelos de IA en Flask.
-	- 
+	- Integrar modelos de Inteligencia Artificial (IA) en una aplicación Flask puede parecer complejo, pero se puede abordar siguiendo una serie de pasos estructurados. A continuación, te proporciono una guía paso a paso para lograr esta integración:
+
+	### 1. **Preparación del Entorno de Desarrollo**
+
+	- Asegúrate de tener Python y Flask instalados.
+	- Instala las librerías necesarias para tu modelo de IA (como TensorFlow, PyTorch, scikit-learn, etc.).
+
+	### 2. **Selección y Preparación del Modelo de IA**
+
+	- Elige el modelo de IA que se ajuste a tus necesidades (puede ser un modelo preentrenado o uno que hayas entrenado tú mismo).
+	- Si el modelo necesita entrenamiento, entrena y guarda el modelo en un archivo.
+
+	### 3. **Carga del Modelo en Flask**
+
+	- Carga el modelo en tu aplicación Flask. Esto se hace típicamente al inicio de la aplicación para que el modelo esté listo para procesar solicitudes.
+	- Asegúrate de manejar adecuadamente la memoria y los recursos, especialmente si el modelo es grande.
+
+	### 4. **Creación de Endpoint(s) de API**
+
+	- Define uno o más endpoints en tu aplicación Flask. Estos endpoints serán los puntos de acceso a través de los cuales los usuarios interactuarán con tu modelo de IA.
+	- Decide qué métodos HTTP (GET, POST, etc.) serán apropiados para cada endpoint.
+
+	### 5. **Manejo de Solicitudes y Respuestas**
+
+	- Escribe código para manejar las solicitudes entrantes. Esto puede incluir la validación de los datos de entrada, su preprocesamiento para que coincidan con el formato esperado por el modelo de IA, y la ejecución del modelo.
+	- Después de que el modelo procese la entrada, envía la respuesta al usuario. Esto puede requerir postprocesar la salida del modelo.
+
+	### 6. **Pruebas**
+
+	- Prueba los endpoints para asegurarte de que funcionan como se espera. Esto incluye probar tanto la parte de Flask como la integración con el modelo de IA.
+
+	### 7. **Despliegue**
+
+	- Una vez que todo esté funcionando correctamente en un entorno de desarrollo, puedes desplegar tu aplicación Flask con el modelo de IA integrado en un servidor para producción.
+
+	### Ejemplo Práctico:
+
+	Aquí hay un ejemplo básico de cómo podría verse esto en código:
+
+``` python 
+from flask import Flask, request, jsonify 
+import some_ai_library  
+	
+app = Flask(__name__)  
+	
+# Cargar el modelo (ajustar según sea necesario) 
+modelo = some_ai_library.load_model('path_to_model')
+	
+@app.route('/predict', methods=['POST']) 
+def predict():     
+	data = request.get_json(force=True)     
+		
+	# Preprocesamiento de los datos según sea necesario
+	processed_data = preprocess(data)      
+	
+	# Realizar la predicción     
+	prediction = modelo.predict(processed_data)     
+	 
+	# Postprocesamiento de la predicción según sea necesario
+	output = postprocess(prediction)      
+	return jsonify(output)  
+		
+if __name__ == '__main__':     
+	app.run(debug=True)
+```
+
+- Este es un esquema muy básico. Dependiendo del modelo y los requisitos de la aplicación, el código puede ser más complejo, especialmente en lo que respecta al preprocesamiento y postprocesamiento de datos.
+
+	### Consideraciones Adicionales
+
+	- **Seguridad:** Implementa medidas de seguridad para proteger tus endpoints, especialmente si manejas datos sensibles.
+	- **Escalabilidad:** Si esperas un alto tráfico, considera estrategias para escalar tu aplicación y manejar la carga.
+	- **Manejo de Errores:** Asegúrate de manejar adecuadamente los errores tanto en la aplicación Flask como en la ejecución del modelo de IA.
+
+	Integrar un modelo de IA en Flask puede abrir un mundo de posibilidades para interactuar con la IA a través de aplicaciones web y es una habilidad valiosa en el campo del desarrollo web y la ciencia de datos.
+	
+	---
+	
     - Uso de librerías de Python para IA (como TensorFlow o PyTorch).
 	- Práctica: Creación de una API para un Modelo de IA 
     
@@ -252,19 +329,25 @@ En resumen, las rutas y métodos en Flask son esenciales para definir cómo una 
     - Crear una ruta API para interactuar con el modelo de IA.
     - Ejercicio práctico: Los estudiantes adaptan la API para interactuar con un modelo de IA básico (p.ej., clasificador de imágenes, generador de texto).
 
-#### Parte 4: Pruebas y Consumo de la API 
+	#### Parte 4: Pruebas y Consumo de la API 
 
-- **Pruebas de la API 
+	- **Pruebas de la API 
     
-    - Uso de herramientas como Postman para probar la API.
-    - Cómo escribir pruebas automáticas para Flask.
-- **Consumo de la API desde un Cliente (10 minutos)**
+	    - Uso de herramientas como Postman para probar la API.
+	    - Cómo escribir pruebas automáticas para Flask.
+	- **Consumo de la API desde un Cliente (10 minutos)**
     
-    - Crear un cliente básico (p.ej., un script de Python o una página web simple) para consumir la API.
-    - Ejercicio práctico: Los estudiantes consumen su API utilizando el cliente.
+	    - Crear un cliente básico (p.ej., un script de Python o una página web simple) para consumir la API.
+	    - Ejercicio práctico: Los estudiantes consumen su API utilizando el cliente.
 
-#### Conclusión y Preguntas 
+	#### Conclusión y Preguntas 
 
-- **Repaso de lo Aprendido y Próximos Pasos 
-- **Sesión de Preguntas y Respuestas
+	- **Repaso de lo Aprendido y Próximos Pasos 
+	- **Sesión de Preguntas y Respuestas
+- Uso de librerías de Python para IA (como TensorFlow o PyTorch).
+	- Práctica: Creación de una API para un Modelo de IA 
+    
+    - Implementar un modelo de IA simple (puede ser un modelo pre-entrenado).
+    - Crear una ruta API para interactuar con el modelo de IA.
+    - Ejercicio práctico: Los estudiantes adaptan la API para interactuar con un modelo de IA básico (p.ej., clasificador de imágenes, generador de texto).
 
