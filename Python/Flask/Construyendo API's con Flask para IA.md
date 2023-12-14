@@ -191,10 +191,62 @@ En resumen, las rutas y métodos en Flask son esenciales para definir cómo una 
 #### Parte 3: Integración de IA en Flask 
 
 - **Teoría de Integración de IA en Flask
+	La integración de Inteligencia Artificial (IA) en una aplicación Flask implica varios pasos y consideraciones. La "teoría" detrás de esto se centra en cómo integrar eficientemente modelos de IA, como aquellos basados en machine learning o procesamiento de lenguaje natural, dentro de una aplicación web Flask. A continuación, describiré los aspectos clave de este proceso:
+
+	##### 1. **Selección del Modelo de IA**
+
+	- **Tipo de Modelo:** Dependiendo de la tarea (reconocimiento de imágenes, procesamiento de lenguaje, predicción, etc.), se elige el modelo apropiado.
+	- **Entrenamiento vs Modelos Preentrenados:** Puedes entrenar tu propio modelo o usar uno preentrenado.
+
+	##### 2. **Integración del Modelo con Flask**
+
+	- **Envoltura del Modelo:** Los modelos de IA suelen estar encapsulados en una clase o función que puede ser llamada desde Flask.
+	- **Carga del Modelo:** Los modelos de IA, especialmente los grandes, a menudo se cargan en memoria cuando se inicia la aplicación Flask para evitar la carga repetida.
+
+	##### 3. **Creación de Endpoints para Interacción con el Modelo**
+
+	- **Endpoints de API:** Flask se utiliza para crear endpoints API que reciben datos de los usuarios, los pasan al modelo de IA, y devuelven los resultados.
+	- **Métodos HTTP:** Usualmente se emplean métodos POST para enviar datos al modelo y obtener resultados.
+
+	##### 4. **Manejo de Datos**
+
+	- **Preprocesamiento:** Los datos enviados a través de la API a menudo necesitan ser preprocesados para adaptarse al formato requerido por el modelo.
+	- **Postprocesamiento:** Los resultados del modelo pueden requerir postprocesamiento antes de enviarlos de vuelta al usuario.
+
+	##### 5. **Seguridad y Rendimiento**
+
+	- **Seguridad:** Asegurar los endpoints API para prevenir accesos no autorizados o maliciosos.
+	- **Gestión de Recursos:** Modelos de IA, especialmente los de deep learning, pueden ser intensivos en recursos. Es importante gestionarlos eficientemente para mantener un buen rendimiento.
+
+	##### 6. **Escalabilidad**
+
+	- **Carga del Servidor:** Dependiendo de la complejidad del modelo, puede ser necesario escalar la infraestructura para manejar cargas altas.
+	- **Balanceo de Carga:** En entornos de producción, se puede necesitar un sistema de balanceo de carga para distribuir las solicitudes entre múltiples instancias.
+
+	##### 7. **Interfaz de Usuario**
+
+	- **Frontend:** Para aplicaciones web, el desarrollo de una interfaz de usuario que interactúe con los endpoints de la API de Flask.
+
+	##### 8. **Pruebas y Mantenimiento**
+
+	- **Pruebas Unitarias y de Integración:** Para asegurar que la integración entre Flask y el modelo de IA funcione correctamente.
+	- **Actualización y Mantenimiento:** Los modelos de IA pueden necesitar ser reentrenados o actualizados con el tiempo.
+
+	##### Ejemplo Práctico
+
+	Supongamos que tienes un modelo de clasificación de imágenes entrenado. Puedes integrarlo en una aplicación Flask de la siguiente manera:
+
+	1. **Carga del Modelo:** Al iniciar la aplicación Flask, carga el modelo en memoria.
+	2. **Endpoint de API:** Crea un endpoint que reciba imágenes, las procese, y pase los datos al modelo.
+	3. **Respuesta:** El modelo procesa la imagen y devuelve una predicción, la cual es enviada de vuelta al usuario.
+
+	En resumen, la integración de IA en Flask requiere una cuidadosa planificación y ejecución, desde la selección y envoltura del modelo de IA, hasta la creación de endpoints eficientes y seguros, y la gestión del rendimiento y la escalabilidad.
+    ---
     
-    - Cómo integrar modelos de IA en Flask.
+- ##### Cómo integrar modelos de IA en Flask.
+	- 
     - Uso de librerías de Python para IA (como TensorFlow o PyTorch).
-- **Práctica: Creación de una API para un Modelo de IA 
+	- Práctica: Creación de una API para un Modelo de IA 
     
     - Implementar un modelo de IA simple (puede ser un modelo pre-entrenado).
     - Crear una ruta API para interactuar con el modelo de IA.
