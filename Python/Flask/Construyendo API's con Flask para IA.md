@@ -1,4 +1,6 @@
 `v.1.0 - Diciembre 2023`
+
+![[Pasted image 20231214021542.png]]
 #### Parte 1: Introducción a las APIs y Flask
 
 - **Introducción a las APIs 

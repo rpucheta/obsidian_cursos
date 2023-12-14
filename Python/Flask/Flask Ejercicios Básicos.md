@@ -1,5 +1,6 @@
 `v.1.0 - Diciembre 2023`
 
+![[Pasted image 20231214021434.png]]
 Ref: https://flask.palletsprojects.com/en/3.0.x/
 
 Mínima Aplicación
