@@ -27,31 +27,60 @@
 ---
 ## Solución/Implementación
 ### Setup Flask
-```
+```python
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
 # Lista de tareas (inicialmente vacía)
 tasks = []
-
 ```
 
 ### Listar todas las tareas
-[Incluye código de ejemplo]
+``` python
+@app.route('/tasks', methods=['GET'])
+def get_tasks():
+    return jsonify({'tasks': tasks})
+```
 
 ### Añadir una tarea
-[Incluye código de ejemplo]
+```python
+@app.route('/tasks', methods=['POST'])
+def add_task():
+    data = request.get_json()
+    if 'task' in data:
+        new_task = {'task': data['task'], 'completed': False}
+        tasks.append(new_task)
+        return jsonify({'message': 'Tarea añadida con éxito!'})
+    else:
+        return jsonify({'message': 'Error: Debes proporcionar una tarea válida.'}), 400
+```
 
 ### Borrar una tarea
-[Incluye código de ejemplo]
+```python
+@app.route('/tasks/<int:task_id>', methods=['DELETE'])
+def delete_task(task_id):
+    if task_id < len(tasks):
+        del tasks[task_id]
+        return jsonify({'message': 'Tarea eliminada con éxito!'})
+    else:
+        return jsonify({'message': 'Error: Tarea no encontrada.'}), 404
+```
 
 ### Completar una tarea
-[Incluye código de ejemplo]
+```python
+@app.route('/tasks/<int:task_id>/complete', methods=['PUT'])
+def complete_task(task_id):
+    if task_id < len(tasks):
+        tasks[task_id]['completed'] = True
+        return jsonify({'message': 'Tarea completada con éxito!'})
+    else:
+        return jsonify({'message': 'Error: Tarea no encontrada.'}), 404
+```
 
 ### Editar una tarea en concreto.
 [Incluye código de ejemplo]
-
+ 
 ### Borrar todas las tareas finalizadas.
 [Incluye código de ejemplo]
 
