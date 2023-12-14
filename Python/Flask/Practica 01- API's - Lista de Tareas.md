@@ -1,4 +1,4 @@
-*v.1.0 - Diciembre 2023*
+`v.1.0 - Diciembre 2023`
   
 ![[Pasted image 20231214020431.png]]
 ## Información General
