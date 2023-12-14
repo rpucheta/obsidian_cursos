@@ -78,6 +78,21 @@
 				 3. Redirección (Redirection): Estos códigos se utilizan para indicar que la solicitud debe tomar una acción adicional para completarse. Por ejemplo, el código 302 (Encontrado) se usa para redireccionar el navegador a otra URL.
 				 4. Error del cliente (Client Error): Los códigos de estado en esta clase indican que la solicitud contiene un error por parte del cliente. El código 400 (Solicitud incorrecta) es común cuando la solicitud es incorrecta o está mal formada.
 				 5. Error del servidor (Server Error): Estos códigos se utilizan cuando el servidor encuentra un error al procesar la solicitud del cliente. El código 500 (Error interno del servidor) es un ejemplo común de esta clase y se usa cuando ocurre un error en el servidor que impide que se procese la solicitud.
+		- ##### Algunos ejemplos:
+			 |Código|Descripción|Uso
+			 |---|---|---|
+			 |200|OK|La solicitud se ha completado con éxito.|
+			 |201|Creado|Se ha creado un nuevo recurso en el servidor.|
+			 |204|Sin contenido|La solicitud se ha completado sin contenido.|
+			 |301|Movido permanentemente|El recurso solicitado se ha movido.|
+			 |302|Encontrado|Redirección temporal a otra URL.|
+			 |400|Solicitud incorrecta|La solicitud del cliente es incorrecta.|
+			 |401|No autorizado|El acceso al recurso está no autorizado.|
+			 |403|Prohibido|El servidor rechaza la solicitud.|
+			 |404|No encon trado|El recurso solicitado no se encuentra.|
+			 |500|Error interno del servidor|El servidor encuentra un error interno.|
+			 |503|Servicio no disponible|El servidor no puede manejar la solicitud.|
+			 ---
 - **Introducción a Flask**
     - ¿Qué es Flask y por qué usarlo para APIs?
     - Estructura básica de una aplicación Flask.
